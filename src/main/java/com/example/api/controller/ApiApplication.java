@@ -24,11 +24,13 @@ public class ApiApplication {
     @Autowired
     private StoreInfoService storeInfoService;
 
+    //全件取得
     @GetMapping("/api/v1/store-info")
     public List<StoreInfo> getAllStoreInfo() {
         return storeInfoService.getAllStoreInfo();
     }    
 
+    //アクセステスト
 	@GetMapping("/hello")
 	public Map<String, Object> hello(){
         Map<String, Object> data = new HashMap<>();
@@ -37,9 +39,9 @@ public class ApiApplication {
         return data;
 	}
 
+    //パラメータ確認
     @GetMapping("/api/v1/users/{id}")
     public ResponseEntity<Map<String, Object>> getUser(@PathVariable Long id) {
-
 
         if (id == null) {
             Map<String, Object> errorResponse = new HashMap<>();
