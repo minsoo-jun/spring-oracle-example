@@ -30,8 +30,12 @@ public class ApiApplication {
         return storeInfoService.getAllStoreInfo();
     }    
 
+    @GetMapping("/api/v1/store-info/{store}")
+    public StoreInfo getStore(@PathVariable String store) {
+        return storeInfoService.getStoreInfo(store);
+    }
     //アクセステスト
-	@GetMapping("/hello")
+	@GetMapping("/")
 	public Map<String, Object> hello(){
         Map<String, Object> data = new HashMap<>();
         data.put("message", "Hello from Spring Boot API!");
@@ -39,6 +43,8 @@ public class ApiApplication {
         return data;
 	}
 
+
+    
     //パラメータ確認
     @GetMapping("/api/v1/users/{id}")
     public ResponseEntity<Map<String, Object>> getUser(@PathVariable Long id) {

@@ -18,4 +18,8 @@ public class StoreInfoService {
         return storeInfoRepository.findAll();
     }    
     
+    public StoreInfo getStoreInfo(String store) {
+        return storeInfoRepository.findByStore(store);
+    }
+
 }

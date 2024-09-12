@@ -2,6 +2,7 @@
 
 ## build
 ```shell
+export PROJECT_ID=$(gcloud config list --format 'value(core.project)')
 gradle build
 gcloud builds submit --tag gcr.io/$PROJECT_ID/api-oracle .
 gcloud run deploy api-oracle \
