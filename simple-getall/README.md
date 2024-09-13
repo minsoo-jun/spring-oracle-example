@@ -77,3 +77,30 @@ VALUES('新大久保駅前店', '東京都新宿区百人町', 190000000, 150000
 
 COMMIT;
 ```
+
+```
+# .bash_profile
+
+# Get the aliases and functions
+if [ -f ~/.bashrc ]; then
+        . ~/.bashrc
+fi
+PATH=$PATH:$HOME/bin
+
+export ORACLE_HOME=/opt/oracle/product/21c/dbhomeXE
+
+export PATH
+export PATH=$PATH:/opt/oracle/product/21c/dbhomeXE/bin
+# User specific environment and startup programs
+
+
+export ORACLE_SID=XE
+
+```
+sqlplus "/as sysdba"
+
+STARTUP
+```
+
+
+``

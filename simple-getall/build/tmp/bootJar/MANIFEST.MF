@@ -1,6 +1,6 @@
 Manifest-Version: 1.0
 Main-Class: org.springframework.boot.loader.launch.JarLauncher
-Start-Class: com.example.api.controller.ApiApplication
+Start-Class: com.example.api.ApiApplication
 Spring-Boot-Version: 3.2.9
 Spring-Boot-Classes: BOOT-INF/classes/
 Spring-Boot-Lib: BOOT-INF/lib/
