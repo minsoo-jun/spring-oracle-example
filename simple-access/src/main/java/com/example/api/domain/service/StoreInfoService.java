@@ -22,4 +22,8 @@ public class StoreInfoService {
         return storeInfoRepository.findByStore(store);
     }
 
+    public void createStoreInfo(StoreInfo storeInfo) {
+        storeInfoRepository.save(storeInfo);
+    }
+
 }

@@ -97,10 +97,26 @@ export PATH=$PATH:/opt/oracle/product/21c/dbhomeXE/bin
 export ORACLE_SID=XE
 
 ```
+
+```
 sqlplus "/as sysdba"
 
 STARTUP
 ```
 
+#Insert data curl example
+```
+        curl --location 'https://api-oracle-904838507507.asia-northeast1.run.app/api/v1/store-info' \
+        --header 'Content-Type: application/json' \
+        --data '{ 
+            "store":"test-store-001", 
+            "address": "test-address", 
+            "category1": 100000, 
+            "category2": 22222,  
+            "category3": 333333, 
+            "category4": 444444, 
+            "lat_long": "35.1994, 129.0596" , 
+            "city": "busan" 
+        }'
+```
 
-``
