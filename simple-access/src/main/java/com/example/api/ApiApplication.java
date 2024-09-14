@@ -78,7 +78,7 @@ public class ApiApplication {
         curl --location --request PUT 'https://api-oracle-904838507507.asia-northeast1.run.app/api/v1/store-info/test-store-001' \
         --header 'Content-Type: application/json' \
         --data '{
-            "address": "updated-address"
+            "address": "updated-address3"
         }'
      */
 
@@ -100,17 +100,16 @@ public class ApiApplication {
                 existingStoreInfo.setAddress(updatedStoreInfo.getAddress());
             }
 
-            //값을 입력하지 않아도 0으로 업데이트 되는 버그 있음.
-            if (updatedStoreInfo.getCategory1() != existingStoreInfo.getCategory1()) {
+            if (Objects.nonNull(updatedStoreInfo.getCategory1())) {
                 existingStoreInfo.setCategory1(updatedStoreInfo.getCategory1());
             }
-            if (updatedStoreInfo.getCategory2() != existingStoreInfo.getCategory2()) {
+            if (Objects.nonNull(updatedStoreInfo.getCategory2())) {
                 existingStoreInfo.setCategory2(updatedStoreInfo.getCategory2());
             }
-            if (updatedStoreInfo.getCategory3() != existingStoreInfo.getCategory3()) {
+            if (Objects.nonNull(updatedStoreInfo.getCategory3())) {
                 existingStoreInfo.setCategory3(updatedStoreInfo.getCategory3());
             }
-            if (updatedStoreInfo.getCategory4() != existingStoreInfo.getCategory4()) {
+            if (Objects.nonNull(updatedStoreInfo.getCategory4())) {
                 existingStoreInfo.setCategory4(updatedStoreInfo.getCategory4());
             }
             if (Objects.nonNull(updatedStoreInfo.getLat_long())) {

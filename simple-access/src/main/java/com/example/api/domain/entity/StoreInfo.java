@@ -15,10 +15,10 @@ public class StoreInfo {
     @Id
     private String store;
     private String address;
-    private int category1;
-    private int category2;
-    private int category3;
-    private int category4;
+    private Integer category1;
+    private Integer category2;
+    private Integer category3;
+    private Integer category4;
     private String lat_long;
     private String city;
 
