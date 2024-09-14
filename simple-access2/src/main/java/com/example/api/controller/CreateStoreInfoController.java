@@ -52,7 +52,7 @@ public class CreateStoreInfoController {
             "city": "busan" 
         }'    
      */
-    @PostMapping("/")
+    @PostMapping("/add")
     public ResponseEntity<Map<String, Object>> createStoreInfo(@RequestBody StoreInfo storeInfo) {
         try {
             // storeInfoService의 createStoreInfo 메소드를 호출하여 DB에 저장
