@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Store Information</title>
+    <link rel="stylesheet" th:href="@{/css/store.css}" />
+</head>
+<body>
+    <h1>Store Information</h1>
+
+    <form id="storeSearchFrom" action="/store/search" method="post">
+    <div class="search-container">
+        <input type="text" id="store" name="store" placeholder="店舗名入力...">
+        <button id="searchButton">Search</button>
+        <a href="/store/new" class="button new-button">NEW</a> </div>
+    </div>
+    </form>
+
+    <table id="storeTable">
+        <thead>
+            <tr>
+                <th colspan="8" th:if="${mode == 'searchResult'}">検索結果：</th>
+            </tr>
+            <tr>
+                <th>Store</th>
+                <th>Address</th>
+                <th>Category 1</th>
+                <th>Category 2</th>
+                <th>Category 3</th>
+                <th>Category 4</th>
+                <th>Lat/Long</th>
+                <th>City</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="store : ${stores}">
+                <td th:text="${store.store}"></td>
+                <td th:text="${store.address}"></td>
+                <td th:text="${store.category1}"></td>
+                <td th:text="${store.category2}"></td>
+                <td th:text="${store.category3}"></td>
+                <td th:text="${store.category4}"></td>
+                <td th:text="${store.lat_long}"></td>
+                <td th:text="${store.city}"></td>
+                <td>
+                    <a th:href="@{/store/edit/{storeName}(storeName=${store.store})}" class="edit-button">Edit</a>
+                    <a th:href="@{/store/delete/{storeName}(storeName=${store.store})}" class="delete-button">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script th:src="@{/js/store.js}"></script>
+</body>
+</html>

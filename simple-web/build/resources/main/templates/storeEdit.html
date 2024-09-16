@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit Store</title>
+  <link rel="stylesheet" th:href="@{/css/store.css}" />
+</head>
+<body>
+<h1>Edit Store</h1>
+
+<form th:action="@{/store/update}" method="post" th:object="${store}">
+  <label for="store">Store:</label>
+  <input type="text" id="store" name="store" th:field="*{store}" readonly><br><br>
+
+  <label for="address">Address:</label>
+  <input type="text" id="address" name="address" th:field="*{address}" required><br><br>
+
+  <label for="category1">Category 1:</label>
+  <input type="number" id="category1" name="category1" th:field="*{category1}" required><br><br>
+
+  <label for="category2">Category 2:</label>
+  <input type="number" id="category2" name="category2" th:field="*{category2}" required><br><br>
+
+  <label for="category3">Category 3:</label>
+  <input type="number" id="category3" name="category3" th:field="*{category3}" required><br><br>
+
+  <label for="category4">Category 4:</label>
+  <input type="number" id="category4" name="category4" th:field="*{category4}" required><br><br>
+
+  <label for="lat_long">Lat/Long:</label>
+  <input type="text" id="lat_long" name="lat_long" th:field="*{lat_long}" required><br><br>
+
+  <label for="city">City:</label>
+  <input type="text" id="city" name="city" th:field="*{city}" required><br><br>
+
+  <button type="submit">Update</button>
+</form>
+</body>
+</html>

@@ -1,0 +1,42 @@
+#storeTable {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#storeTable th, #storeTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#storeTable tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#storeTable th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+.search-container {
+    margin-bottom: 10px;
+}
+
+.edit-button, .delete-button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.edit-button {
+    background-color: #FFC107;
+    color: white;
+}
+
+.delete-button {
+    background-color: #F44336;
+    color: white;
+}
