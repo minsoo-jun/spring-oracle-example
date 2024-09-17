@@ -13,6 +13,7 @@ import com.example.api.entity.StoreInfo;
 
 public interface UserRepository  extends JpaRepository<StoreInfo, String> {
 
+    //@Cacheable(value = "myCache", expire = "10s")
     @Query(value = "SELECT store, address, category1, category2, category3, category4, lat_long, city FROM store_info order by category1 desc", nativeQuery = true)
     List<StoreInfo> allStore();
 
